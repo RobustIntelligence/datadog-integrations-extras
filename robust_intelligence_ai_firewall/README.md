@@ -6,30 +6,41 @@ The Robust Intelligence AI Firewall Integration brings the performance metrics o
 
 ## Setup
 
+Follow the instructions below to install and configure this check for an Agent running on a host. For containerized environments, see the [Autodiscovery Integration Templates][4] for guidance on applying these instructions.
+
 ### Installation
 
-To install the Robust Intelligence AI Firewall check on your host:
+For Agent v7.21+ / v6.21+, follow the instructions below to install the Robust Intelligence AI Firewall check on your host. See [Use Community Integrations][3] to install with the Docker Agent or earlier versions of the Agent.
 
+1. Run the following command to install the Agent integration:
 
-1. Install the [developer toolkit]
-(https://docs.datadoghq.com/developers/integrations/python/)
- on any machine.
+   ```shell
+   datadog-agent integration install -t datadog-robust-intelligence-ai-firewall==<INTEGRATION_VERSION>
+   ```
 
-2. Run `ddev release build robust_intelligence_ai_firewall` to build the package.
-
-3. [Download the Datadog Agent][2].
-
-4. Upload the build artifact to any host with an Agent and
- run `datadog-agent integration install -w
- path/to/robust_intelligence_ai_firewall/dist/<ARTIFACT_NAME>.whl`.
+2. Configure your integration similar to core [integrations][4].
 
 ### Configuration
 
-1. <List of steps to setup this Integration>
+1. Edit the `robust_intelligence_ai_firewall.d/conf.yaml` file, in the `conf.d/` folder at the root of your Agent's configuration directory to start collecting your Robust Intelligence AI Firewall performance data.
+    ```yaml
+    init_config:
+
+    instances:
+        ## @param metrics_endpoint - string - required
+        ## The URL to Robust Intelligence AI Firewall 
+        ## internal metrics per loaded plugin in Prometheus
+        ## format.
+        #
+      - metrics_endpoint: http://localhost:8080/metrics
+    ```
+   See the [sample fluentbit.d/conf.yaml][5] file for all available configuration options.
+
+2. [Restart the Agent][6].
 
 ### Validation
 
-<Steps to validate integration is functioning as expected>
+[Run the Agent's status subcommand][7] and look for `robust_intelligence_ai_firewall` under the Checks section.
 
 ## Data Collected
 

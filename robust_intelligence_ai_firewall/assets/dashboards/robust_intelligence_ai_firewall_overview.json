@@ -1,6 +1,6 @@
 {
-  "title": "Firewall Demo Dashboard",
-  "description": null,
+  "title": "Robust Intelligence AI Firewall Dashboard",
+  "description": "[[suggested_dashboards]]",
   "widgets": [
     {
       "id": 5105430024734006,
@@ -8,7 +8,6 @@
         "title": "Flagged requests %",
         "title_size": "16",
         "title_align": "left",
-        "time": {},
         "type": "query_value",
         "requests": [
           {
@@ -77,7 +76,6 @@
           "value",
           "sum"
         ],
-        "time": {},
         "type": "timeseries",
         "requests": [
           {
@@ -201,32 +199,32 @@
               {
                 "data_source": "metrics",
                 "name": "query1",
-                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:factual_inconsistency}.as_count()"
+                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:factual_inconsistency, flagged:true}.as_count()"
               },
               {
                 "data_source": "metrics",
                 "name": "query2",
-                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:pii_detection}.as_count()"
+                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:pii_detection, flagged:true}.as_count()"
               },
               {
                 "data_source": "metrics",
                 "name": "query3",
-                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:prompt_injection}.as_count()"
+                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:prompt_injection, flagged:true}.as_count()"
               },
               {
                 "data_source": "metrics",
                 "name": "query4",
-                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:prompt_extraction}.as_count()"
+                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:prompt_extraction, flagged:true}.as_count()"
               },
               {
                 "data_source": "metrics",
                 "name": "query5",
-                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:toxicity}.as_count()"
+                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:toxicity, flagged:true}.as_count()"
               },
               {
                 "data_source": "metrics",
                 "name": "query6",
-                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:pii_extraction}.as_count()"
+                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:pii_extraction, flagged:true}.as_count()"
               }
             ],
             "response_format": "timeseries",
@@ -295,17 +293,17 @@
               {
                 "data_source": "metrics",
                 "name": "query1",
-                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:factual_inconsistency, validation_type:output}.as_count()"
+                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:factual_inconsistency, validation_type:output, flagged:true}.as_count()"
               },
               {
                 "data_source": "metrics",
                 "name": "query2",
-                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:pii_detection, validation_type:output}.as_count()"
+                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:pii_detection, validation_type:output, flagged:true}.as_count()"
               },
               {
                 "data_source": "metrics",
                 "name": "query5",
-                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:toxicity, validation_type:output}.as_count()"
+                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:toxicity, validation_type:output, flagged:true}.as_count()"
               }
             ],
             "response_format": "timeseries",
@@ -374,17 +372,17 @@
               {
                 "data_source": "metrics",
                 "name": "query3",
-                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:prompt_injection, validation_type:input}.as_count()"
+                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:prompt_injection, validation_type:input, flagged:true}.as_count()"
               },
               {
                 "data_source": "metrics",
                 "name": "query4",
-                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:prompt_extraction, validation_type:input}.as_count()"
+                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:prompt_extraction, validation_type:input, flagged:true}.as_count()"
               },
               {
                 "data_source": "metrics",
                 "name": "query6",
-                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:pii_extraction, validation_type:input}.as_count()"
+                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:pii_extraction, validation_type:input, flagged:true}.as_count()"
               }
             ],
             "response_format": "timeseries",
@@ -437,7 +435,7 @@
               {
                 "data_source": "metrics",
                 "name": "query1",
-                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:factual_inconsistency}.as_count()"
+                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:factual_inconsistency, flagged:true}.as_count()"
               }
             ],
             "response_format": "timeseries",
@@ -490,7 +488,7 @@
               {
                 "data_source": "metrics",
                 "name": "query3",
-                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:prompt_injection}.as_count()"
+                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:prompt_injection, flagged:true}.as_count()"
               }
             ],
             "response_format": "timeseries",
@@ -543,7 +541,7 @@
               {
                 "data_source": "metrics",
                 "name": "query5",
-                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:toxicity}.as_count()"
+                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:toxicity, flagged:true}.as_count()"
               }
             ],
             "response_format": "timeseries",
@@ -596,7 +594,7 @@
               {
                 "data_source": "metrics",
                 "name": "query4",
-                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:prompt_extraction}.as_count()"
+                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:prompt_extraction, flagged:true}.as_count()"
               }
             ],
             "response_format": "timeseries",
@@ -649,7 +647,7 @@
               {
                 "data_source": "metrics",
                 "name": "query2",
-                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:pii_detection}.as_count()"
+                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:pii_detection, flagged:true}.as_count()"
               }
             ],
             "response_format": "timeseries",
@@ -702,7 +700,7 @@
               {
                 "data_source": "metrics",
                 "name": "query6",
-                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:pii_extraction}.as_count()"
+                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:pii_extraction, flagged:true}.as_count()"
               }
             ],
             "response_format": "timeseries",
@@ -755,7 +753,7 @@
               {
                 "data_source": "metrics",
                 "name": "query1",
-                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:factual_inconsistency}.as_count()"
+                "query": "sum:robust_intelligence_ai_firewall.rule_evaluated.count{rule:factual_inconsistency, flagged:true}.as_count()"
               }
             ],
             "response_format": "timeseries",
