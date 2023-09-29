@@ -5,3 +5,4 @@
 ***Added***:
 
 * Initial Release
+* Collect and display metrics for the rules flagged and allowed by the Firewall 
