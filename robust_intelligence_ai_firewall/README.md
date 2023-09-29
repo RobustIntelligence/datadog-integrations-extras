@@ -54,7 +54,7 @@ Robust Intelligence AI Firewall does not include any metrics.
 
 ### Service Checks
 
-Robust Intelligence AI Firewall does not include any service checks.
+See [metadata.csv][7] for a list of metrics provided by this check.
 
 ### Events
 
