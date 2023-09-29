@@ -72,5 +72,5 @@ Need Help? Contact [Robust Intelligence Support][9].
 [6]: https://docs.datadoghq.com/agent/guide/agent-commands/#agent-status-and-information
 [7]: https://github.com/DataDog/integrations-extras/blob/master/robust_intelligence_ai_firewall/metadata.csv
 [8]: https://github.com/DataDog/integrations-extras/blob/master/robust_intelligence_ai_firewall/assets/service_checks.json
-[9]: help@robustintelligence.com
+[9]: mailto:help@robustintelligence.com
 
