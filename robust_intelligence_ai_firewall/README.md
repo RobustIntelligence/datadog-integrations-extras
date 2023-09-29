@@ -50,11 +50,11 @@ For Agent v7.21+ / v6.21+, follow the instructions below to install the Robust I
 
 ### Metrics
 
-Robust Intelligence AI Firewall does not include any metrics.
+See [metadata.csv][7] for a list of metrics provided by this check.
 
 ### Service Checks
 
-See [metadata.csv][7] for a list of metrics provided by this check.
+Robust Intelligence AI Firewall does not include any service checks.
 
 ### Events
 
