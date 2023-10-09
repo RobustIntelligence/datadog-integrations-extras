@@ -22,7 +22,7 @@ For Agent v7.21+ / v6.21+, follow the instructions below to install the Robust I
    datadog-agent integration install -t datadog-robust-intelligence-ai-firewall==1.0.0
    ```
 
-2. Configure your integration similar to core [integrations][3]. Refer the Configuration section below for steps specific to this integration.
+2. Configure your integration similar to core [integrations][3]. Refer to the Configuration section below for steps specific to this integration.
 
 ### Configuration
 
