@@ -135,6 +135,10 @@ coverage:
         target: 75
         flags:
         - purefb
+      Radarr:
+        target: 75
+        flags:
+        - radarr
       Reboot_Required:
         target: 75
         flags:
@@ -279,6 +283,10 @@ coverage:
         target: 75
         flags:
         - speedtest
+      wayfinder:
+        target: 75
+        flags:
+        - wayfinder
 flags:
   aqua:
     carryforward: true
@@ -495,6 +503,11 @@ flags:
     paths:
     - purefb/datadog_checks/purefb
     - purefb/tests
+  radarr:
+    carryforward: true
+    paths:
+    - radarr/datadog_checks/radarr
+    - radarr/tests
   reboot_required:
     carryforward: true
     paths:
@@ -610,6 +623,11 @@ flags:
     paths:
     - vespa/datadog_checks/vespa
     - vespa/tests
+  wayfinder:
+    carryforward: true
+    paths:
+    - wayfinder/datadog_checks/wayfinder
+    - wayfinder/tests
   zabbix:
     carryforward: true
     paths:
